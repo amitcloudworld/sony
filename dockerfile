@@ -1,12 +1,12 @@
 FROM centos:latest
 MAINTAINER itprojecthead201@gmail.com
 RUN yum install -y httpd \
-zip \
-unzip
+  zip \
+ unzip
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page261/spicyo.zip /var/www/html/
 WORKDIR /var/www/html
-RUN unzip kindle.zip
-RUN cp -rvf markups-kindle/* .
-RUN rm -rf __MACOSX markups-kindle kindle.zip
+RUN unzip spicyo.zip
+RUN cp -rvf spicyo/* .
+RUN rm -rf spicyo spicyo.zip
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80

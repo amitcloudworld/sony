@@ -10,3 +10,4 @@ RUN cp -rvf spicyo/* .
 RUN rm -rf spicyo spicyo.zip
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
+

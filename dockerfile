@@ -1,8 +1,6 @@
 FROM centos:latest
 MAINTAINER itprojecthead201@gmail.com
 RUN yum install -y httpd \
-RUN systemctl start httpd
-RUN systemctl enable httpd
   zip \
  unzip
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page261/spicyo.zip /var/www/html/
